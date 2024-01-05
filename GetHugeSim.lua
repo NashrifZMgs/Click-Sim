@@ -199,13 +199,13 @@ end
 
 --Pet--
 
-function AutoBuyEggs(pa,pi,pu)
+function AutoBuyEggs()
     spawn(function()
         while getgenv().pets == true do 
             local args = {
-                [1] = pa,--types egg
-                [2] = pi, -- world
-                [3] = pu -- Island
+                [1] = p,--types egg
+                [2] = c2, -- world
+                [3] = world
             }
             game:GetService("ReplicatedStorage").Remotes.Pets.PurchaseEgg:InvokeServer(unpack(args))
         end
