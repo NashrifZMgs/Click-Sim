@@ -4,11 +4,11 @@ getgenv().sellStrength = false;
 
 --Pet-- 
 getgenv().pets = false;
-    local p = 0 -- Eggs
-    local I = {"Island"}
-    local c = 0
-    local world = I[c]
-    local c2 = 0 --Map
+local p = 0 -- Eggs
+local I = {"Island"}
+local c = 0
+local world = I[c]
+local c2 = 0 --Map
 
 --Shop--
 
@@ -90,7 +90,7 @@ PetSection:AddDropdown({
     Default = false,
     Options = {"1500","7500","20,000","50,000","90,000"},  -- Eggs
     Callback = function(Eggs)
-        if PetS == true then
+        if getgenv().pets == true then
             if Eggs == "1500" then
                 p = 1
                 c = 1
