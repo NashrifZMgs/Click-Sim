@@ -88,7 +88,7 @@ PetSection:AddDropdown({
     Options = {"1500","7500","20,000","50,000","90,000"},  -- Eggs
     Callback = function(Eggs)
         if getgenv().pets == true then
-            AutoBuyEggs(p,c2,c) --function
+            AutoBuyEggs() --function
             if Eggs == "1500" then
                 p = 1 --typesegg
                 c = 1 --World v1
