@@ -5,7 +5,7 @@ getgenv().sellStrength = false;
 --Pet-- 
 getgenv().pets = false;
 local p = 0 -- Eggs
-local I = {"Island", "Christmas"}
+local I = {"Islands", "Christmas"}
 local c = 0
 local world = I[c]
 local c2 = 0 --Map
@@ -83,16 +83,16 @@ local PetS = PetSection:AddToggle({
 })
 
 PetSection:AddDropdown({
-    Name = "Island",
+    Name = "Islands",
     Default = false,
     Options = {"1500","7500","20,000","50,000","90,000"},  -- Eggs
     Callback = function(Eggs)
         if getgenv().pets == true then
-            AutoBuyEggs(p,c2,c)
+            AutoBuyEggs(p,c2,c) --function
             if Eggs == "1500" then
-                p = 1
-                c = 1
-                c2 = 1
+                p = 1 --typesegg
+                c = 1 --World v1
+                c2 = 1 --World v2
             elseif Eggs == "7500" then
                 p = 2
                 c = 1
