@@ -93,23 +93,23 @@ PetSection:AddDropdown({
         if getgenv().pets == true then
             if Eggs == "1500" then
                 p = 1
-                world = 1
+                c = 1
                 c2 = 1
             elseif Eggs == "7500" then
                 p = 2
-                world = 1
+                c = 1
                 c2 = 1
             elseif Eggs == "20,000" then
                 p = 3
-                world = 1
+                c = 1
                 c2 = 1
             elseif Eggs == "50,000" then
                 p = 4
-                world = 1
+                c = 1
                 c2 = 1
             elseif Eggs == "90,000" then
                 p = 5
-                world = 1
+                c = 1
                 c2 = 1
             end
         end
