@@ -79,8 +79,6 @@ local PetS = PetSection:AddToggle({
 	Default = false,
 	Callback = function(Value)
 		getgenv().pets = Value
-        if getgenv().pets == true then
-            AutoBuyEggs()
         end
 	end    
 })
@@ -90,6 +88,7 @@ PetSection:AddDropdown({
     Default = false,
     Options = {"1500","7500","20,000","50,000","90,000"},  -- Eggs
     Callback = function(Eggs)
+        AutoBuyEggs()
         if getgenv().pets == true then
             if Eggs == "1500" then
                 p = 1
