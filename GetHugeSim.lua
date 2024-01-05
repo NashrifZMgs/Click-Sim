@@ -88,29 +88,29 @@ local PetS = PetSection:AddToggle({
 PetSection:AddDropdown({
     Name = "Island",
     Default = false,
-    Options = {"1500","7500","20,000","50,000","90,000"}, --Eggs
+    Options = {"1500","7500","20,000","50,000","90,000"},  -- Eggs
     Callback = function(Eggs)
-        if PetS == true then
+        if getgenv().pets == true then
             if Eggs == "1500" then
-                local p = 1
-                local world = 1
-                local c2 = 1
+                p = 1
+                world = 1
+                c2 = 1
             elseif Eggs == "7500" then
-                local p = 2
-                local world = 1
-                local c2 = 1
+                p = 2
+                world = 1
+                c2 = 1
             elseif Eggs == "20,000" then
-                local p = 3
-                local world = 1
-                local c2 = 1
+                p = 3
+                world = 1
+                c2 = 1
             elseif Eggs == "50,000" then
-                local p = 4
-                local world = 1
-                local c2 = 1
+                p = 4
+                world = 1
+                c2 = 1
             elseif Eggs == "90,000" then
-                local p = 5
-                local world = 1
-                local c2 = 1
+                p = 5
+                world = 1
+                c2 = 1
             end
         end
     end
