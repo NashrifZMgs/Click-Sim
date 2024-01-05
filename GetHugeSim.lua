@@ -86,7 +86,7 @@ PetSection:AddToggle({
 
 PetSection:AddDropdown({
     Name = "Island",
-    Default = false,
+    Default = {},
     Options = {"1500","7500","20,000","50,000","90,000"}, --Eggs
     Callback = function(Eggs)
         if getgenv().pets == true then
