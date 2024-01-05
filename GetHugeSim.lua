@@ -22,7 +22,8 @@ local MainTab = Window:MakeTab({
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
-local FarmingSection = PlayerTab:AddSection({
+
+local FarmingSection = MainTab:AddSection({
 	Name = "Farming"
 })
 
