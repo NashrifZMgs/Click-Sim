@@ -110,6 +110,8 @@ PetSection:AddDropdown({
                 p = 5
                 c = 1
                 c2 = 1
+            end
+        end
     end
 })
 
