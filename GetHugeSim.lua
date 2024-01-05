@@ -75,6 +75,7 @@ local PetS = PetSection:AddToggle({
 	Default = false,
 	Callback = function(Value)
 		getgenv().pets = Value
+        AutoBuyEggs()
 	end    
 })
 
@@ -187,12 +188,31 @@ end
 function AutoBuyEggs()
     spawn(function()
         while getgenv().pets == true do 
-            if EV == "1500" then local args = {[1] = 1,[2] = 1,[3] = "Islands"} game:GetService("ReplicatedStorage").Remotes.Pets.PurchaseEgg:InvokeServer(unpack(args)) wait(0.1) end
-            if EV == "7500" then local args = {[1] = 2,[2] = 1,[3] = "Islands"} game:GetService("ReplicatedStorage").Remotes.Pets.PurchaseEgg:InvokeServer(unpack(args)) wait(0.1) end
-            if EV == "20,000" then local args = {[1] = 3,[2] = 1,[3] = "Islands"} game:GetService("ReplicatedStorage").Remotes.Pets.PurchaseEgg:InvokeServer(unpack(args)) wait(0.1) end
-            if EV == "50,000" then local args = {[1] = 4,[2] = 1,[3] = "Islands"} game:GetService("ReplicatedStorage").Remotes.Pets.PurchaseEgg:InvokeServer(unpack(args)) wait(0.1) end
-            if EV == "90,000" then local args = {[1] = 5,[2] = 1,[3] = "Islands"} game:GetService("ReplicatedStorage").Remotes.Pets.PurchaseEgg:InvokeServer(unpack(args)) wait(0.1) end
-            if EV == "250,000" then local args = {[1] = 1,[2] = 1,[3] = "Christmas"} game:GetService("ReplicatedStorage").Remotes.Pets.PurchaseEgg:InvokeServer(unpack(args)) wait(0.1) end
+            if EV == "1500" then local args = {
+                [1] = 1,
+                [2] = 1,
+                [3] = "Islands"
+            } game:GetService("ReplicatedStorage").Remotes.Pets.PurchaseEgg:InvokeServer(unpack(args)) wait(0.1) end
+            if EV == "7500" then local args = {
+                [1] = 2,
+                [2] = 1,
+                [3] = "Islands"} game:GetService("ReplicatedStorage").Remotes.Pets.PurchaseEgg:InvokeServer(unpack(args)) wait(0.1) end
+            if EV == "20,000" then local args = {
+                [1] = 3,
+                [2] = 1,
+                [3] = "Islands"} game:GetService("ReplicatedStorage").Remotes.Pets.PurchaseEgg:InvokeServer(unpack(args)) wait(0.1) end
+            if EV == "50,000" then local args = {
+                [1] = 4,
+                [2] = 1,
+                [3] = "Islands"} game:GetService("ReplicatedStorage").Remotes.Pets.PurchaseEgg:InvokeServer(unpack(args)) wait(0.1) end
+            if EV == "90,000" then local args = {
+                [1] = 5,
+                [2] = 1,
+                [3] = "Islands"} game:GetService("ReplicatedStorage").Remotes.Pets.PurchaseEgg:InvokeServer(unpack(args)) wait(0.1) end
+            if EV == "250,000" then local args = {
+                [1] = 1,
+                [2] = 1,
+                [3] = "Christmas"} game:GetService("ReplicatedStorage").Remotes.Pets.PurchaseEgg:InvokeServer(unpack(args)) wait(0.1) end
         end
     end)
 end
