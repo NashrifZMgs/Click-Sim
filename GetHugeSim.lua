@@ -5,7 +5,8 @@ getgenv().sellStrength = false;
 --Pet-- 
 getgenv().pets = false;
 p = 0 -- Eggs
-c = {"Island"} 
+I = {"Island"}
+c = [I]
 c2 = 0 --Map
 
 --Shop--
@@ -205,7 +206,7 @@ function AutoBuyEggs()
             local args = {
                 [1] = p,
                 [2] = c2,
-                [3] = c
+                [3] = [c]
             }
             game:GetService("ReplicatedStorage").Remotes.Pets.PurchaseEgg:InvokeServer(unpack(args))
             wait()
