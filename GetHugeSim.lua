@@ -1,5 +1,5 @@
 getgenv().liftWeight = true
-
+getgenv().lift = game:GetService("ReplicatedStorage").Remotes.LiftWeight:FireServer()
 
 
 
@@ -7,7 +7,7 @@ function AutoLiftWeight()
     spawn(function()
     if getgenv().liftWeight == true then
         while getgenv().liftWeight == true do
-            game:GetService("ReplicatedStorage").Remotes.LiftWeight:FireServer()
+            getgenv.lift
             wait()
         end
     end)
