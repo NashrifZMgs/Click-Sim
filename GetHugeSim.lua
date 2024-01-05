@@ -4,11 +4,11 @@ getgenv().sellStrength = false;
 
 --Pet-- 
 getgenv().pets = false;
-local p = 0 -- Eggs
-local I = {"Island"}
-local c = 0
-local world = c[I]
-local c2 = 0 --Map
+    local p = 0 -- Eggs
+    local I = {"Island"}
+    local c = 0
+    local world = I[c]
+    local c2 = 0 --Map
 
 --Shop--
 
