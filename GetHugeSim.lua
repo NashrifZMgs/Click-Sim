@@ -43,7 +43,7 @@ FarmingSection:AddToggle({
 	Default = false,
 	Callback = function(Value)
 		getgenv().sellStrength = Value
-        if getgenv().liftWeight == true then
+        if getgenv().sellStrength == true then
             AutoLiftWeight()
         end
 	end    
