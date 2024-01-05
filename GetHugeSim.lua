@@ -5,7 +5,6 @@ getgenv().sellStrength = false;
 --Pet-- 
 getgenv().pets = false;
 local EV
-local I = {"Islands", "Christmas"}
 
 --Shop--
 
@@ -84,12 +83,22 @@ PetSection:AddDropdown({
     Default = {},
     Options = {"1500","7500","20,000","50,000","90,000"},  -- Eggs
     Callback = function(Eggs)
-        if getgenv == true then
+        if getgenv().pets == true then
             EV = Eggs
         end
     end
 })
 
+PetSection:AddDropdown({
+    Name = "Christmas",
+    Default = {},
+    Options = {"250,000"},  -- Eggs
+    Callback = function(Eggs)
+        if getgenv().pets == true then
+            EV = Eggs
+        end
+    end
+})
 
 --PetTab--
 
@@ -183,7 +192,7 @@ function AutoBuyEggs()
             if EV == "20,000" then local args = {[1] = 3,[2] = 1,[3] = "Islands"} game:GetService("ReplicatedStorage").Remotes.Pets.PurchaseEgg:InvokeServer(unpack(args)) wait(0.1) end
             if EV == "50,000" then local args = {[1] = 4,[2] = 1,[3] = "Islands"} game:GetService("ReplicatedStorage").Remotes.Pets.PurchaseEgg:InvokeServer(unpack(args)) wait(0.1) end
             if EV == "90,000" then local args = {[1] = 5,[2] = 1,[3] = "Islands"} game:GetService("ReplicatedStorage").Remotes.Pets.PurchaseEgg:InvokeServer(unpack(args)) wait(0.1) end
-            if EV == "Santa's Egg" then local args = {[1] = 1,[2] = 1,[3] = "Christmas"} game:GetService("ReplicatedStorage").Remotes.Pets.PurchaseEgg:InvokeServer(unpack(args)) wait(0.1) end
+            if EV == "250,000" then local args = {[1] = 1,[2] = 1,[3] = "Christmas"} game:GetService("ReplicatedStorage").Remotes.Pets.PurchaseEgg:InvokeServer(unpack(args)) wait(0.1) end
         end
     end)
 end
