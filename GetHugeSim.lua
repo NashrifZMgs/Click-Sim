@@ -75,8 +75,9 @@ PetSection:AddToggle({
 	Name = "AutoBuy",
 	Default = false,
 	Callback = function(Value)
-		getgenv().pets = Value
-        AutoBuyEggs()
+		if getgenv().pets == Value then
+            AutoBuyEggs()
+        end
 	end    
 })
 
