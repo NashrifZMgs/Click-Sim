@@ -13,3 +13,4 @@ function AutoLiftWeight()
     end)
 end
 AutoLiftWeight()
+print(AutoLiftWeight())
