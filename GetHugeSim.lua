@@ -2,26 +2,6 @@ getgenv().liftWeight = false;
 getgenv().sellStrength = false;
 
 
---main--
-function AutoLiftWeight()
-    spawn(function()
-        while getgenv().liftWeight == true do
-            game:GetService("ReplicatedStorage").Remotes.LiftWeight:FireServer()
-            wait()
-        end
-    end)
-end
-
-function AutoSellStrength()
-    spawn(function()
-        while getgenv().sellStrength == true do 
-            game:GetService("ReplicatedStorage").Remotes.LiftWeight:FireServer()
-            wait()
-        end
-    end)
-end
---mainEnd
-
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
 OrionLib:MakeNotification({
@@ -30,6 +10,7 @@ OrionLib:MakeNotification({
 	Image = "rbxassetid://4483345998",
 	Time = 5
 })
+
 
 
 local Window = OrionLib:MakeWindow({Name = "Orion Example", HidePremium = false, SaveConfig = true, ConfigFolder = "Orion"})
@@ -124,16 +105,28 @@ SettingsSection:AddToggle({
 	end    
 })
 
-SettingsSection:AddDropdown({
-	Name = "Dropdown",
-	Default = "1",
-	Options = {"1", "2"},
-	Callback = function(Value)
-		print(Value)
-	end    
-})
-
-
 --Settings End--
 
 OrionLib:Init() --UI Lib End
+
+
+--main--
+function AutoLiftWeight()
+    spawn(function()
+        while getgenv().liftWeight == true do
+            game:GetService("ReplicatedStorage").Remotes.LiftWeight:FireServer()
+            wait()
+        end
+    end)
+end
+
+function AutoSellStrength()
+    spawn(function()
+        while getgenv().sellStrength == true do 
+            game:GetService("ReplicatedStorage").Remotes.LiftWeight:FireServer()
+            wait()
+        end
+    end)
+end
+--mainEnd
+
