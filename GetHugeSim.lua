@@ -1,6 +1,13 @@
+--main--
 getgenv().liftWeight = false;
 getgenv().sellStrength = false;
 
+--Pet-- 
+getgenv().pets = false;
+p = 0 -- Eggs
+I = {"Island"} 
+c = I --Map
+c2 = 0 --Map
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
@@ -50,6 +57,61 @@ FarmingSection:AddToggle({
 })
 
 --MainEnd--
+
+--PetTab--
+
+local PetTab = Window:MakeTab({
+	Name = "Pet",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local PetSection = PetTab:AddSection({
+	Name = "Eggs"
+})
+
+local PetS = PetSection:AddToggle({
+	Name = "AutoBuy",
+	Default = false,
+	Callback = function(Value)
+		getgenv().pets = Value
+        if getgenv().pets == true then
+            AutoBuyEggs()
+        end
+	end    
+})
+
+PetSection:AddDropdown({
+    Name = "Island",
+    Default = false,
+    Options = {"1500","7500","20,000","50,000","90,000"}, --Eggs
+    Callback = function(Eggs)
+        if PetS == true then
+            if Eggs == "1500" then
+                p = 1
+                c = 1
+                c2 = 1
+            elseif Eggs == "7500" then
+                p = 2
+                c = 1
+                c2 = 1
+            elseif Eggs == "20,000" then
+                p = 3
+                c = 1
+                c2 = 1
+            elseif Eggs == "50,000" then
+                p = 4
+                c = 1
+                c2 = 1
+            elseif Eggs == "90,000" then
+                p = 5
+                c = 1
+                c2 = 1
+    end
+})
+
+
+--PetTab--
 
 --Player Tab--
 
@@ -131,3 +193,18 @@ function AutoSellStrength()
 end
 --mainEnd
 
+--PetTab--
+
+function AutoBuyEggs()
+    spawn(function()
+        while getgenv().pets == true do 
+            local args = {
+                [1] = p,
+                [2] = c2,
+                [3] = c
+            }
+            game:GetService("ReplicatedStorage").Remotes.Pets.PurchaseEgg:InvokeServer(unpack(args))
+    end)
+end
+
+--PetTab--
