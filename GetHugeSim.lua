@@ -5,8 +5,7 @@ getgenv().sellStrength = false;
 --Pet-- 
 getgenv().pets = false;
 p = 0 -- Eggs
-I = {"Island"} 
-c = I --Map
+c = {"Island"} 
 c2 = 0 --Map
 
 --Shop--
