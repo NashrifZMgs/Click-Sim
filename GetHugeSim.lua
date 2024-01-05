@@ -34,6 +34,41 @@ OrionLib:MakeNotification({
 
 local Window = OrionLib:MakeWindow({Name = "Orion Example", HidePremium = false, SaveConfig = true, ConfigFolder = "Orion"})
 
+--MainTab--
+
+local MainTab = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+local FarmingSection = PlayerTab:AddSection({
+	Name = "Farming"
+})
+
+FarmingSection:AddToggle({
+	Name = "AutoLift",
+	Default = false,
+	Callback = function(Value)
+		getgenv().liftWeight = Value
+        if getgenv().liftWeight == true then
+            AutoLiftWeight()
+        end
+	end    
+})
+
+FarmingSection:AddToggle({
+	Name = "AutoSell",
+	Default = false,
+	Callback = function(Value)
+		getgenv().sellStrength = Value
+        if getgenv().liftWeight == true then
+            AutoLiftWeight()
+        end
+	end    
+})
+
+--MainEnd--
+
 --Player Tab--
 
 local PlayerTab = Window:MakeTab({
