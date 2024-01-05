@@ -83,23 +83,19 @@ PetSection:AddToggle({
 
 PetSection:AddDropdown({
     Name = "Islands",
-    Default = {},
+    Default = true,
     Options = {"1500","7500","20,000","50,000","90,000"},  -- Eggs
     Callback = function(Eggs)
-        if getgenv().pets == true then
             EV = Eggs
-        end
     end
 })
 
 PetSection:AddDropdown({
     Name = "Christmas",
-    Default = {},
+    Default = true,
     Options = {"250,000"},  -- Eggs
     Callback = function(Eggs)
-        if getgenv().pets == true then
             EV = Eggs
-        end
     end
 })
 
