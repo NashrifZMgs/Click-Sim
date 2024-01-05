@@ -124,7 +124,7 @@ end
 function AutoSellStrength()
     spawn(function()
         while getgenv().sellStrength == true do 
-            game:GetService("ReplicatedStorage").Remotes.LiftWeight:FireServer()
+            game:GetService("ReplicatedStorage").Remotes.SellStrengthRequest:FireServer()
             wait()
         end
     end)
