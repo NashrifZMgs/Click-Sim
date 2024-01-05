@@ -1,15 +1,25 @@
-getgenv().liftWeight = true;
-getgenv().saleStrength = false;
+getgenv().liftWeight = false;
+getgenv().sellStrength = false;
 
 
-
-
+--main--
 function AutoLiftWeight()
     spawn(function()
-        while getgenv().liftWeight == true do
-            game:GetService("ReplicatedStorage").Remotes.LiftWeight:FireServer()
-            wait(0.1)
+        if getgenv().liftWeight == true then
+            while getgenv().liftWeight == true do
+                game:GetService("ReplicatedStorage").Remotes.LiftWeight:FireServer()
+                wait()
+            end
         end
     end)
 end
 
+function AutoSellStrength()
+    spawn(function()
+        while getgenv().sellStrength == true do 
+            game:GetService("ReplicatedStorage").Remotes.LiftWeight:FireServer()
+            wait()
+        end
+    end)
+end
+--mainEnd
