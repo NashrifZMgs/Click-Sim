@@ -206,7 +206,7 @@ function AutoBuyEggs()
             local args = {
                 [1] = p,
                 [2] = c2,
-                [3] = [c]
+                [3] = c
             }
             game:GetService("ReplicatedStorage").Remotes.Pets.PurchaseEgg:InvokeServer(unpack(args))
             wait()
