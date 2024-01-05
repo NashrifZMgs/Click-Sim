@@ -6,7 +6,8 @@ getgenv().sellStrength = false;
 getgenv().pets = false;
 p = 0 -- Eggs
 I = {"Island"}
-c = [I]
+c = 0
+world = c[I]
 c2 = 0 --Map
 
 --Shop--
@@ -92,23 +93,23 @@ PetSection:AddDropdown({
         if PetS == true then
             if Eggs == "1500" then
                 p = 1
-                c = 1
+                world = 1
                 c2 = 1
             elseif Eggs == "7500" then
                 p = 2
-                c = 1
+                world = 1
                 c2 = 1
             elseif Eggs == "20,000" then
                 p = 3
-                c = 1
+                world = 1
                 c2 = 1
             elseif Eggs == "50,000" then
                 p = 4
-                c = 1
+                world = 1
                 c2 = 1
             elseif Eggs == "90,000" then
                 p = 5
-                c = 1
+                world = 1
                 c2 = 1
             end
         end
@@ -206,7 +207,7 @@ function AutoBuyEggs()
             local args = {
                 [1] = p,
                 [2] = c2,
-                [3] = c
+                [3] = world
             }
             game:GetService("ReplicatedStorage").Remotes.Pets.PurchaseEgg:InvokeServer(unpack(args))
             wait()
