@@ -10,7 +10,7 @@ getgenv().requestRedeemGift = false;
 
 --eggs
 getgenv().Eggy = false;
-local earthEgg = {"Basic Egg", "Farm Egg", "Fantasy Egg", "Wisdom Egg", "Wicked Egg", "Winged Egg", "Buzz Egg", "Sunny Egg", "Industry Egg", "Crystalized Egg", "Swamp Egg", "Mystical Egg", "Sand Egg", "Carnival Egg", "Candy Egg", "Devil Egg"}
+local earthEgg = {"Basic Egg", "Farm Egg", "Fantasy Egg", "Frosted Egg", "Wisdom Egg", "Wicked Egg", "Winged Egg", "Buzz Egg", "Sunny Egg", "Industry Egg", "Crystalized Egg", "Swamp Egg", "Mystical Egg", "Sand Egg", "Carnival Egg", "Candy Egg", "Devil Egg"}
 local spaceEgg = {"Comet Egg", "Cyber Egg", "UFO Egg", "Martian Egg", "Starlight Egg", "Uranium Egg"}
 local currentEggIndex = 0
 local currentEggIndex2 = 0
@@ -103,7 +103,7 @@ local PetTab = Window:MakeTab({
  PetSection:AddDropdown({
     Name = "Earth",
     Default = {},
-    Options = {"Basic", "Farm", "Fantasy", "Wisdom", "Wicked", "Winged", "Buzz", "Sunny", "Industry", "Crystalized", "Swamp", "Mystical", "Sand", "Carnival", "Candy", "Devil"},
+    Options = {"Basic", "Farm", "Fantasy", "Frosted", "Wisdom", "Wicked", "Winged", "Buzz", "Sunny", "Industry", "Crystalized", "Swamp", "Mystical", "Sand", "Carnival", "Candy", "Devil"},
     Callback = function(EarthEgg)
         local currentEgg = earthEgg[currentEggIndex]
         buyEggs(currentEgg)
@@ -113,32 +113,34 @@ local PetTab = Window:MakeTab({
             currentEggIndex = 2
         elseif EarthEgg == "Fantasy" then
             currentEggIndex = 3
-        elseif EarthEgg == "Wisdom" then
+        elseif EarthEgg == "Frosted" then
             currentEggIndex = 4
-        elseif EarthEgg == "Wicked" then
+        elseif EarthEgg == "Wisdom" then
             currentEggIndex = 5
-        elseif EarthEgg == "Winged" then
+        elseif EarthEgg == "Wicked" then
             currentEggIndex = 6
-        elseif EarthEgg == "Buzz" then
+        elseif EarthEgg == "Winged" then
             currentEggIndex = 7
-        elseif EarthEgg == "Sunny" then
+        elseif EarthEgg == "Buzz" then
             currentEggIndex = 8
-        elseif EarthEgg == "Industry" then
+        elseif EarthEgg == "Sunny" then
             currentEggIndex = 9
-        elseif EarthEgg == "Crystalized" then
+        elseif EarthEgg == "Industry" then
             currentEggIndex = 10
-        elseif EarthEgg == "Swamp" then
+        elseif EarthEgg == "Crystalized" then
             currentEggIndex = 11
-        elseif EarthEgg == "Mystical" then
+        elseif EarthEgg == "Swamp" then
             currentEggIndex = 12
-        elseif EarthEgg == "Sand" then
+        elseif EarthEgg == "Mystical" then
             currentEggIndex = 13
-        elseif EarthEgg == "Carnival" then
+        elseif EarthEgg == "Sand" then
             currentEggIndex = 14
-        elseif EarthEgg == "Candy" then
+        elseif EarthEgg == "Carnival" then
             currentEggIndex = 15
-        elseif EarthEgg == "Devil" then
+        elseif EarthEgg == "Candy" then
             currentEggIndex = 16
+        elseif EarthEgg == "Devil" then
+            currentEggIndex = 17
         else 
             currentEggIndex = 0
         end
