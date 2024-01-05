@@ -85,7 +85,6 @@ PetSection:AddDropdown({
     Default = true,
     Options = {"1500","7500","20,000","50,000","90,000"},  -- Eggs
     Callback = function(Eggs)
-            EV = Eggs
     end
 })
 
@@ -94,7 +93,6 @@ PetSection:AddDropdown({
     Default = true,
     Options = {"250,000"},  -- Eggs
     Callback = function(Eggs)
-            EV = Eggs
     end
 })
 
