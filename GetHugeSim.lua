@@ -98,17 +98,6 @@ SettingsSection:AddDropdown({
 	end    
 })
 
-SettingsSection:AddToggle({
-    Name = "Enable Feature",
-    Default = false,
-    Callback = function(Value)
-        isFeatureEnabled = Value
-        
-        -- Adjusting the dropdown based on the toggle state
-        local dropdownValue = isFeatureEnabled and "1" or "2"
-        Dropdown:Set(dropdownValue)
-    end
-})
 
 --Settings End--
 
