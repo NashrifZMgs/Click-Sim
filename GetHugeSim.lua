@@ -210,7 +210,6 @@ function AutoBuyEggs()
                 [3] = world
             }
             game:GetService("ReplicatedStorage").Remotes.Pets.PurchaseEgg:InvokeServer(unpack(args))
-            wait()
         end
     end)
 end
