@@ -73,7 +73,7 @@ local PetSection = PetTab:AddSection({
 	Name = "Eggs"
 })
 
-local PetS = PetSection:AddToggle({
+PetSection:AddToggle({
 	Name = "AutoBuy",
 	Default = false,
 	Callback = function(Value)
@@ -89,7 +89,7 @@ PetSection:AddDropdown({
     Default = false,
     Options = {"1500","7500","20,000","50,000","90,000"}, --Eggs
     Callback = function(Eggs)
-        if PetS == true then
+        if getgenv().pets == true then
             if Eggs == "1500" then
                 p = 1
                 c = 1
