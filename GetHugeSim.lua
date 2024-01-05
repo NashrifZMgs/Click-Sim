@@ -9,6 +9,9 @@ I = {"Island"}
 c = I --Map
 c2 = 0 --Map
 
+--Shop--
+
+
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
 OrionLib:MakeNotification({
