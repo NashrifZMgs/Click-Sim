@@ -16,6 +16,18 @@
             "stopOnEntry": true,
             "useCHook": true
         },
+        {
+            "type": "LuaHelper-Debug",
+            "request": "launch",
+            "name": "LuaHelper-DebugFile",
+            "description": "独立文件调试模式",
+            "luaPath": "GetHugeSim.lua",
+            "packagePath": [],
+            "luaFileExtension": "",
+            "connectionPort": 8818,
+            "stopOnEntry": true,
+            "useCHook": true
+        },
 
         
         {
@@ -35,7 +47,7 @@
             "request": "launch",
             "name": "LuaHelper-DebugFile",
             "description": "独立文件调试模式",
-            "luaPath": "",
+            "luaPath": "GetHugeSim.lua",
             "packagePath": [],
             "luaFileExtension": "",
             "connectionPort": 8818,
