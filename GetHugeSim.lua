@@ -85,15 +85,7 @@ PetSection:AddDropdown({
     Default = {},
     Options = {"1500","7500","20,000","50,000","90,000"},  -- Eggs
     Callback = function(Eggs)
-
-    end
-})
-
-PetSection:AddDropdown({
-    Name = "Christmas",
-    Default = {},
-    Options = {"250,000"},  -- Eggs
-    Callback = function(Eggs)
+        EV = Eggs
     end
 })
 
