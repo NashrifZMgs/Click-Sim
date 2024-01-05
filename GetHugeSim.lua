@@ -3,8 +3,9 @@ getgenv().liftWeight = false;
 getgenv().sellStrength = false;
 
 --Pet-- 
-getgenv().pets = false;
 local EV
+getgenv().pets = false;
+
 
 --Shop--
 
@@ -70,7 +71,7 @@ local PetSection = PetTab:AddSection({
 	Name = "Eggs"
 })
 
-local PetS = PetSection:AddToggle({
+PetSection:AddToggle({
 	Name = "AutoBuy",
 	Default = false,
 	Callback = function(Value)
