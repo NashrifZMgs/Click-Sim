@@ -90,7 +90,7 @@ PetSection:AddDropdown({
     Default = false,
     Options = {"1500","7500","20,000","50,000","90,000"},  -- Eggs
     Callback = function(Eggs)
-        if getgenv().pets == true then
+        if PetS == true then
             if Eggs == "1500" then
                 p = 1
                 c = 1
