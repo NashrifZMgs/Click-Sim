@@ -13,4 +13,4 @@ function AutoLiftWeight()
     end)
 end
 AutoLiftWeight()
-print(AutoLiftWeight())
+print("working?", AutoLiftWeight())
