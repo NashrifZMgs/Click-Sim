@@ -1,8 +1,6 @@
 getgenv().liftWeight = true
 
 
-
-
 function AutoLiftWeight()
     spawn(function)
     if getgenv().liftWeight == true then
