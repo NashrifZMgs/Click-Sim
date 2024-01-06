@@ -4,7 +4,7 @@ getgenv().sellStrength = false;
 
 --Pet-- 
 local EV = {"1500","7500","20,000","50,000","90,000",}
-local currentEggIndex = nil
+local currentEggIndex = 0
 getgenv().pets = false;
 
 
