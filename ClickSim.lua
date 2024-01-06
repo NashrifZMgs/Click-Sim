@@ -12,8 +12,8 @@ getgenv().requestRedeemGift = false;
 getgenv().Eggy = false;
 local earthEgg = {"Basic Egg", "Farm Egg", "Fantasy Egg", "Frosted Egg", "Wisdom Egg", "Wicked Egg", "Winged Egg", "Buzz Egg", "Sunny Egg", "Industry Egg", "Crystalized Egg", "Swamp Egg", "Mystical Egg", "Sand Egg", "Carnival Egg", "Candy Egg", "Devil Egg"}
 local spaceEgg = {"Comet Egg", "Cyber Egg", "UFO Egg", "Martian Egg", "Starlight Egg", "Uranium Egg"}
-local currentEggIndex = 0
-local currentEggIndex2 = 0
+local currentEggIndex = nil
+local currentEggIndex2 = nil
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
