@@ -88,16 +88,17 @@ PetSection:AddDropdown({
         currentEgg = EV[currentEggIndex]
         if getgenv().pets == true then
             AutoBuyEggs(currentEgg)
-        if Eggs == "1500" then
-            currentEggIndex = 1
-        elseif Eggs == "7500" then
-            currentEggIndex = 2
-        elseif Eggs == "20,000" then
-            currentEggIndex = 3
-        elseif Eggs == "50,000" then
-            currentEggIndex = 4
-        elseif Eggs == "90,000" then
-            currentEggIndex = 5
+            if Eggs == "1500" then
+                currentEggIndex = 1
+            elseif Eggs == "7500" then
+                currentEggIndex = 2
+            elseif Eggs == "20,000" then
+                currentEggIndex = 3
+            elseif Eggs == "50,000" then
+                currentEggIndex = 4
+            elseif Eggs == "90,000" then
+                currentEggIndex = 5
+            end
         end
     end
 })
