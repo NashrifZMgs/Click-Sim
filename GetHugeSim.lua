@@ -85,7 +85,7 @@ PetSection:AddDropdown({
     Default = {},
     Options = {"1500","7500","20,000","50,000","90,000",},  -- Eggs
     Callback = function(Eggs)
-        currentEgg = EV[currentEggIndex]
+        local currentEgg = EV[currentEggIndex]
         if getgenv().pets == true then
             AutoBuyEggs(currentEgg)
             if Eggs == "1500" then
