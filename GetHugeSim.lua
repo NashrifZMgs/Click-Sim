@@ -75,8 +75,6 @@ PetSection:AddToggle({
 	Default = false,
 	Callback = function(Value)
         getgenv().pets = Value
-
-        end
 	end    
 })
 
