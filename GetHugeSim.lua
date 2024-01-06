@@ -52,6 +52,8 @@ FarmingSection:AddToggle({
 	Default = false,
 	Callback = function(Value)
 		getgenv().sellStrength = Value
+        if getgenv().sellStrength == true then
+            AutoSellStrength()
         end
 	end    
 })
