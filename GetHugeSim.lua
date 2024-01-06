@@ -85,9 +85,19 @@ PetSection:AddToggle({
 PetSection:AddDropdown({
     Name = "Islands",
     Default = {},
-    Options = {"1500","7500","20,000","50,000","90,000","250,000"},  -- Eggs
+    Options = {"1500","7500","20,000","50,000","90,000",},  -- Eggs
     Callback = function(Eggs)
-        EV = Eggs
+        if Eggs == "1500" then
+            EV = "1500"
+        elseif Eggs == "7500" then
+            EV = "7500"
+        elseif Eggs == "20,000" then
+            EV = "20,000"
+        elseif Eggs == "50,000" then
+            EV = "50,000"
+        elseif Eggs == "90,000" then
+            EV = "90,000"
+        end
     end
 })
 
