@@ -34,7 +34,7 @@ function AutoRebirth()
     end)
 end
 
-function AutoEggs(typeEggs)
+function AutoEggs()
     spawn(function()
         while getgenv().rebirth == true do
             local args = {
@@ -95,7 +95,7 @@ MainSection:AddDropdown({
 	Options = {"1","5","10","25","100","500","2.5k"},
 	Callback = function(Value)
 		if getgenv().rebirth == true then
-            AutoRebirth(typeRebirth)
+            AutoRebirth()
             if Value == "1" then
                 typeRebirth = 1
             elseif Value == "5" then
@@ -139,7 +139,7 @@ PetSection:AddDropdown({
     Options = {"Basic","Mythic"},
     Callback = function(Value)
         if getgenv().egg == true then
-            AutoEggs(typeEggs)
+            AutoEggs()
             if Value == "Basic" then
                 typeEggs = "Basic"
             elseif Value == "Mythic" then
