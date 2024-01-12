@@ -154,7 +154,7 @@ MainSection:AddToggle({
 MainSection:AddDropdown({
 	Name = "RebirthType",
 	Default = {},
-	Options = {"1","5","10","25","100","500","2.5k","5k","10k","50k","250k",},
+	Options = {"1","5","10","25","100","500","2.5k","5k","10k","50k","250k","1M","25M","100M","500M"},
 	Callback = function(Value)
 		if getgenv().rebirth == true then
             AutoRebirth()
@@ -180,6 +180,14 @@ MainSection:AddDropdown({
                 typeRebirth = 10
             elseif Value == "250k" then
                 typeRebirth = 11
+            elseif Value == "1M" then
+                typeRebirth = 12
+            elseif Value == "25M" then
+                typeRebirth = 13
+            elseif Value == "100M" then
+                typeRebirth = 14
+            elseif Value == "500M" then
+                typeRebirth = 15
             end
         end
 	end    
