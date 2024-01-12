@@ -94,21 +94,23 @@ MainSection:AddDropdown({
 	Default = {},
 	Options = {"1","5","10","25","100","500","2.5k"},
 	Callback = function(Value)
-		AutoRebirth(typeRebirth)
-        if Value == "1" then
-            typeRebirth = 1
-        elseif Value == "5" then
-            typeRebirth = 2
-        elseif Value == "10" then
-            typeRebirth = 3
-        elseif Value == "25" then
-            typeRebirth = 4
-        elseif Value == "100" then
-            typeRebirth = 5
-        elseif Value == "500" then
-            typeRebirth = 6
-        elseif Value == "2.5k" then
-            typeRebirth = 7
+		if getgenv().rebirth == true then
+            AutoRebirth(typeRebirth)
+            if Value == "1" then
+                typeRebirth = 1
+            elseif Value == "5" then
+                typeRebirth = 2
+            elseif Value == "10" then
+                typeRebirth = 3
+            elseif Value == "25" then
+                typeRebirth = 4
+            elseif Value == "100" then
+                typeRebirth = 5
+            elseif Value == "500" then
+                typeRebirth = 6
+            elseif Value == "2.5k" then
+                typeRebirth = 7
+            end
         end
 	end    
 })
@@ -125,7 +127,7 @@ local PetSection = PetTab:AddSection({
     Name = "Eggs"
 })
 PetSection:AddToggle({
-    Name = "AutoRebirth",
+    Name = "AutoEggs",
     Default = false,
     Callback = function(Value)
         getgenv().egg = Value
@@ -136,11 +138,13 @@ PetSection:AddDropdown({
     Default = {},
     Options = {"Basic","Mythic"},
     Callback = function(Value)
-        AutoEggs(typeEggs)
-        if Value == "Basic" then
-            typeEggs = "Basic"
-        elseif Value == "Mythic" then
-            typeEggs = "Mythic"
+        if getgenv().egg == true then
+            AutoEggs(typeEggs)
+            if Value == "Basic" then
+                typeEggs = "Basic"
+            elseif Value == "Mythic" then
+                typeEggs = "Mythic"
+            end
         end
     end
 })
