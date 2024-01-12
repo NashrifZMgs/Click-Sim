@@ -3,9 +3,10 @@ getgenv().rebirth = false;
 
 local typeRebirth
 
---Eggs--
+--Pets--
 getgenv().egg = false;
 local typeEggs
+getgenv().craft = false;
 
 
 
@@ -34,6 +35,7 @@ function AutoRebirth()
     end)
 end
 
+--Pets--
 function AutoEggs()
     spawn(function()
         while getgenv().egg == true do
@@ -42,6 +44,18 @@ function AutoEggs()
                 [2] = "Triple"
             }
             game:GetService("ReplicatedStorage"):WaitForChild("Functions"):WaitForChild("Unbox"):InvokeServer(unpack(args))
+            wait()
+        end
+    end)
+end
+function AutoCraft()
+    spawn(function()
+        while getgenv().craft == true do
+            local args = {
+                [1] = "CraftAll",
+                [2] = {}
+            }
+            game:GetService("ReplicatedStorage"):WaitForChild("Functions"):WaitForChild("Request"):InvokeServer(unpack(args))
             wait()
         end
     end)
@@ -148,6 +162,18 @@ PetSection:AddDropdown({
         end
     end
 })
+
+PetSection:AddToggle({
+    Name = "AutoCraft",
+    Default = false,
+    Callback = function(Value)
+        getgenv().craft = Value
+        if getgenv().craft == true then
+            AutoCraft()
+        end
+    end
+})
+
 --PetTabEnd--
 
 
