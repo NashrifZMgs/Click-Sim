@@ -5,7 +5,8 @@ local typeRebirth
 
 --Eggs--
 getgenv().egg = true;
-local typeEggs
+local typeEggs = {"Basic","Mythic"}
+local eggCount
 
 
 
@@ -34,11 +35,11 @@ function AutoRebirth()
     end)
 end
 
-function AutoEggs()
+function AutoEggs(Eggstype)
     spawn(function()
         while getgenv().rebirth == true do
             local args = {
-                [1] = typeEggs,
+                [1] = Eggstype,
                 [2] = "Single"
             }
             game:GetService("ReplicatedStorage"):WaitForChild("Functions"):WaitForChild("Unbox"):InvokeServer(unpack(args))
@@ -138,12 +139,13 @@ PetSection:AddDropdown({
     Default = {},
     Options = {"Basic","Mythic"},
     Callback = function(Value)
+        local countEgg = typeEggs[eggCount]
         if getgenv().egg == true then
-            AutoEggs()
+            AutoEggs(countEgg)
             if Value == "Basic" then
-                typeEggs = "Basic"
+                eggCount = 1
             elseif Value == "Mythic" then
-                typeEggs = "Mythic"
+                eggCount = 2
             end
         end
     end
