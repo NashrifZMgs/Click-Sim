@@ -14,3 +14,4 @@ function AutoClick()
         end
     end)
 end
+AutoClick()
