@@ -41,7 +41,7 @@ function AutoEggs(typeEggs)
                 [1] = typeEggs,
                 [2] = "Single"
             }
-            game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Unbox"):InvokeServer(unpack(args))
+            game:GetService("ReplicatedStorage"):WaitForChild("Functions"):WaitForChild("Unbox"):InvokeServer(unpack(args))
             wait()
         end
     end)
