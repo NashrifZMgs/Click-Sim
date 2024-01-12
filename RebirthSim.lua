@@ -192,14 +192,12 @@ MainSection:AddDropdown({
                 typeRebirth = 16
             elseif Value == "2.5B" then
                 typeRebirth = 17
-            elseif Value == "5B" then
-                typeRebirth = 18
             elseif Value == "10B" then
-                typeRebirth = 19
+                typeRebirth = 18
             elseif Value == "50B" then
-                typeRebirth = 20
+                typeRebirth = 19
             elseif Value == "250B" then
-                typeRebirth = 21
+                typeRebirth = 20
             end
         end
 	end    
