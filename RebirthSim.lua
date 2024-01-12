@@ -154,7 +154,7 @@ MainSection:AddToggle({
 MainSection:AddDropdown({
 	Name = "RebirthType",
 	Default = {},
-	Options = {"1","5","10","25","100","500","2.5k","5k","10k"},
+	Options = {"1","5","10","25","100","500","2.5k","5k","10k","50k","250k",},
 	Callback = function(Value)
 		if getgenv().rebirth == true then
             AutoRebirth()
@@ -172,6 +172,14 @@ MainSection:AddDropdown({
                 typeRebirth = 6
             elseif Value == "2.5k" then
                 typeRebirth = 7
+            elseif Value == "5k" then
+                typeRebirth = 8
+            elseif Value == "10k" then
+                typeRebirth = 9
+            elseif Value == "50k" then
+                typeRebirth = 10
+            elseif Value == "250k" then
+                typeRebirth = 11
             end
         end
 	end    
@@ -198,7 +206,7 @@ PetSection:AddToggle({
 PetSection:AddDropdown({
     Name = "TypeEggs",
     Default = {},
-    Options = {"Basic","Mythic"},
+    Options = {"Basic","Mythic","Forest","Beach","Atlantis","Desert","Winter","Volcano","Moon","Cyber","Magic","Heaven","Nuclear","Void","Spooky","Cave","Steampunk","Hell"},
     Callback = function(Value)
         if getgenv().egg == true then
             AutoEggs(typeEggs)
@@ -206,6 +214,38 @@ PetSection:AddDropdown({
                 typeEggs = "Basic"
             elseif Value == "Mythic" then
                 typeEggs = "Mythic"
+            elseif Value == "Forest" then
+                typeEggs = "Forest"
+            elseif Value == "Beach" then
+                typeEggs = "Beach"
+            elseif Value == "Atlantis" then
+                typeEggs = "Atlantis"
+            elseif Value == "Desert" then
+                typeEggs = "Desert"
+            elseif Value == "Winter" then
+                typeEggs = "Winter"
+            elseif Value == "Volcano" then
+                typeEggs = "Volcano"
+            elseif Value == "Moon" then
+                typeEggs = "Moon"
+            elseif Value == "Cyber" then
+                typeEggs = "Cyber"
+            elseif Value == "Magic" then
+                typeEggs = "Magic"
+            elseif Value == "Heaven" then
+                typeEggs = "Heaven"
+            elseif Value == "Nuclear" then
+                typeEggs = "Nuclear"
+            elseif Value == "Void" then
+                typeEggs = "Void"
+            elseif Value == "Spooky" then
+                typeEggs = "Spooky"
+            elseif Value == "Cave" then
+                typeEggs = "Cave"
+            elseif Value == "Steampunk" then
+                typeEggs = "Steampunk"
+            elseif Value == "Hell" then
+                typeEggs = "Hell"
             end
         end
     end
