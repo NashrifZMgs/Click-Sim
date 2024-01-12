@@ -3,6 +3,9 @@ getgenv().rebirth = false;
 
 local typeRebirth
 
+--Eggs--
+getgenv().egg = true;
+local typeEggs
 
 
 
@@ -31,6 +34,18 @@ function AutoRebirth()
     end)
 end
 
+function AutoEggs(typeEggs)
+    spawn(function()
+        while getgenv().rebirth == true do
+            local args = {
+                [1] = typeEggs,
+                [2] = "Single"
+            }
+            game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Unbox"):InvokeServer(unpack(args))
+            wait()
+        end
+    end)
+end
 
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
@@ -99,6 +114,37 @@ MainSection:AddDropdown({
 })
 
 --MainTabEnd--
+--PetTab--
+
+local PetTab = Window:MakeTab({
+    Name = "Pets",
+    Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+local PetSection = PetTab:AddSection({
+    Name = "Eggs"
+})
+PetSection:AddToggle({
+    Name = "AutoRebirth",
+    Default = false,
+    Callback = function(Value)
+        getgenv().egg = Value
+    end
+})
+PetSection:AddDropdown({
+    Name = "TypeEggs",
+    Default = {},
+    Options = {"Basic","Mythic"},
+    Callback = function(Value)
+        AutoEggs(typeEggs)
+        if Value == "Basic" then
+            typeEggs = "Basic"
+        elseif Value == "Mythic" then
+            typeEggs = "Mythic"
+        end
+    end
+})
+--PetTabEnd--
 
 
 --Player Tab--
