@@ -36,7 +36,7 @@ end
 
 function AutoEggs()
     spawn(function()
-        while getgenv().eggs == true do
+        while getgenv().egg == true do
             local args = {
                 [1] = typeEggs,
                 [2] = "Triple"
