@@ -24,7 +24,7 @@ function AutoRebirth()
     spawn(function()
         while getgenv().rebirth == true do
             local args = {
-                [1] = 4
+                [1] = 5
             }
             game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rebirth"):FireServer(unpack(args))
             wait()
