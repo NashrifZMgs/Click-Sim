@@ -9,8 +9,11 @@ local typeEggs
 getgenv().craft = false;
 
 
-
-
+--Upgrades-- 
+getgenv().clickMultiplier = false;
+getgenv().rebirthButton = false;
+getgenv().gemMultiplier = false;
+getgenv().luckMultiplier = false;
 
 
 
@@ -56,6 +59,51 @@ function AutoCraft()
                 [2] = {}
             }
             game:GetService("ReplicatedStorage"):WaitForChild("Functions"):WaitForChild("Request"):InvokeServer(unpack(args))
+            wait()
+        end
+    end)
+end
+--Upgrades--
+function AutoUpClick()
+    spawn(function()
+        while getgenv().clickMultiplier == true do
+            local args = {
+                [1] = "ClickMultiplier"
+            }
+            game:GetService("ReplicatedStorage"):WaitForChild("Functions"):WaitForChild("Upgrade"):InvokeServer(unpack(args))
+            wait()
+        end
+    end)
+end
+function AutoUpGem()
+    spawn(function()
+        while getgenv().gemMultiplier == true do
+            local args = {
+                [1] = "GemsMultiplier"
+            }
+            game:GetService("ReplicatedStorage"):WaitForChild("Functions"):WaitForChild("Upgrade"):InvokeServer(unpack(args))
+            wait()
+        end
+    end)
+end
+function AutoUpRebirth()
+    spawn(function()
+        while getgenv().rebirthButton == true do
+            local args = {
+                [1] = "RebirthButtons"
+            }
+            game:GetService("ReplicatedStorage"):WaitForChild("Functions"):WaitForChild("Upgrade"):InvokeServer(unpack(args))
+            wait()
+        end
+    end)
+end
+function AutoUpLuck()
+    spawn(function()
+        while getgenv().luckMultiplier == true do
+            local args = {
+                [1] = "LuckMultiplier"
+            }
+            game:GetService("ReplicatedStorage"):WaitForChild("Functions"):WaitForChild("Upgrade"):InvokeServer(unpack(args))
             wait()
         end
     end)
@@ -106,7 +154,7 @@ MainSection:AddToggle({
 MainSection:AddDropdown({
 	Name = "RebirthType",
 	Default = {},
-	Options = {"1","5","10","25","100","500","2.5k"},
+	Options = {"1","5","10","25","100","500","2.5k","5k","10k"},
 	Callback = function(Value)
 		if getgenv().rebirth == true then
             AutoRebirth()
@@ -175,7 +223,58 @@ PetSection:AddToggle({
 })
 
 --PetTabEnd--
+--UpgradesTab--
 
+local UpgradeTab = Window:MakeTab({
+    Name = "Upgrade",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+local UpgradeSection = UpgradeTab:AddSection({
+    Name = "AutoUpgrade"
+})
+UpgradeSection:AddToggle({
+    Name = "AutoUpClick",
+    Default = false,
+    Callback = function(Value)
+        getgenv().clickMultiplier = Value
+        if getgenv().clickMultiplier == true then
+            AutoUpClick()
+        end
+    end
+})
+UpgradeSection:AddToggle({
+    Name = "AutoUpRebirth",
+    Default = false,
+    Callback = function(Value)
+        getgenv().rebirthButton = Value
+        if getgenv().rebirthButton == true then
+            AutoUpRebirth()
+        end
+    end
+})
+UpgradeSection:AddToggle({
+    Name = "AutoUpGem",
+    Default = false,
+    Callback = function(Value)
+        getgenv().gemMultiplier = Value
+        if getgenv().gemMultiplier == true then
+            AutoUpGem()
+        end
+    end
+})
+UpgradeSection:AddToggle({
+    Name = "AutoUpLuck",
+    Default = false,
+    Callback = function(Value)
+        getgenv().luckMultiplier = Value
+        if getgenv().luckMultiplier == true then
+            AutoUpLuck()
+        end
+    end
+})
+
+--UpgradesTabEnd--
 
 --Player Tab--
 
