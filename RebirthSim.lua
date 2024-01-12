@@ -39,7 +39,7 @@ function AutoEggs()
         while getgenv().rebirth == true do
             local args = {
                 [1] = typeEggs,
-                [2] = "Single"
+                [2] = "Triple"
             }
             game:GetService("ReplicatedStorage"):WaitForChild("Functions"):WaitForChild("Unbox"):InvokeServer(unpack(args))
             wait()
