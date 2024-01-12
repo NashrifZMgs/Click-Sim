@@ -1,7 +1,7 @@
 getgenv().click = true;
 getgenv().rebirth = true;
 
-local typeRebirth = {"1","5","10","25"}
+local typeRebirth = {"1","5","10","25","100","500","2.5k"}
 local indexcountrebirth = 0
 
 
@@ -24,7 +24,7 @@ function AutoRebirth()
     spawn(function()
         while getgenv().rebirth == true do
             local args = {
-                [1] = 5
+                [1] = 7
             }
             game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Rebirth"):FireServer(unpack(args))
             wait()
