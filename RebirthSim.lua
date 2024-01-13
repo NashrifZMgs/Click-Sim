@@ -343,66 +343,67 @@ MainSection:AddDropdown({
             elseif Value == "100QnD" then
                 typeRebirth = 92
             elseif Value == "250QnD" then
-            elseif Value == "1sxD" then
                 typeRebirth = 93
-            elseif Value == "2.5sxD" then
+            elseif Value == "1sxD" then
                 typeRebirth = 94
-            elseif Value == "10sxD" then
+            elseif Value == "2.5sxD" then
                 typeRebirth = 95
-            elseif Value == "25sxD" then
+            elseif Value == "10sxD" then
                 typeRebirth = 96
-            elseif Value == "100sxD" then
+            elseif Value == "25sxD" then
                 typeRebirth = 97
-            elseif Value == "250sxD" then
+            elseif Value == "100sxD" then
                 typeRebirth = 98
-            elseif Value == "1SpD" then
+            elseif Value == "250sxD" then
                 typeRebirth = 99
-            elseif Value == "2.5Spd" then
+            elseif Value == "1SpD" then
                 typeRebirth = 100
-            elseif Value == "10Spd" then
+            elseif Value == "2.5Spd" then
                 typeRebirth = 101
-            elseif Value == "25Spd" then
+            elseif Value == "10Spd" then
                 typeRebirth = 102
-            elseif Value == "100Spd" then
+            elseif Value == "25Spd" then
                 typeRebirth = 103
-            elseif Value == "250Spd" then
+            elseif Value == "100Spd" then
                 typeRebirth = 104
-            elseif Value == "1OcD" then
+            elseif Value == "250Spd" then
                 typeRebirth = 105
-            elseif Value == "2.5OcD" then
+            elseif Value == "1OcD" then
                 typeRebirth = 106
-            elseif Value == "10OcD" then
-                typeRebirth = 107
-            elseif Value == "25OcD" then
+            elseif Value == "2.5OcD" then
                 typeRebirth = 108
-            elseif Value == "100OcD" then
+            elseif Value == "10OcD" then
                 typeRebirth = 109
-            elseif Value == "250OcD" then
+            elseif Value == "25OcD" then
                 typeRebirth = 110
-            elseif Value == "1NvD" then
+            elseif Value == "100OcD" then
                 typeRebirth = 111
-            elseif Value == "2.5NvD" then
+            elseif Value == "250OcD" then
                 typeRebirth = 112
-            elseif Value == "10NvD" then
+            elseif Value == "1NvD" then
                 typeRebirth = 113
-            elseif Value == "25NvD" then
+            elseif Value == "2.5NvD" then
                 typeRebirth = 114
-            elseif Value == "100NvD" then
+            elseif Value == "10NvD" then
                 typeRebirth = 115
-            elseif Value == "250NvD" then
+            elseif Value == "25NvD" then
                 typeRebirth = 116
-            elseif Value == "1Vgn" then
+            elseif Value == "100NvD" then
                 typeRebirth = 117
-            elseif Value == "2.5Vgn" then
+            elseif Value == "250NvD" then
                 typeRebirth = 118
-            elseif Value == "10Vgn" then
+            elseif Value == "1Vgn" then
                 typeRebirth = 119
-            elseif Value == "25Vgn" then
+            elseif Value == "2.5Vgn" then
+                typeRebirth = 120
+            elseif Value == "10Vgn" then
                 typeRebirth = 121
-            elseif Value == "100Vgn" then
+            elseif Value == "25Vgn" then
                 typeRebirth = 122
-            elseif Value == "250Vgn" then
+            elseif Value == "100Vgn" then
                 typeRebirth = 123
+            elseif Value == "250Vgn" then
+                typeRebirth = 124
             end
         end
 	end    
