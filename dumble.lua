@@ -13,4 +13,4 @@ function Autowin()
         end
     end)
 end
-AutoWin()
+Autowin()
