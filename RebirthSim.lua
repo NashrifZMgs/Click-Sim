@@ -114,7 +114,7 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 
 OrionLib:MakeNotification({
 	Name = "KiokenZHub",
-	Content = "Orion Example",
+	Content = "Welcome To KiokenZHub",
 	Image = "rbxassetid://4483345998",
 	Time = 5
 })
