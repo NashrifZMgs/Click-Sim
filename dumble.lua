@@ -76,7 +76,7 @@ MainSection:AddToggle({
     end
 })
 MainSection:AddToggle({
-    Name = "AutoDumble",
+    Name = "AutoWin",
     Default = false,
     Callback = function(Value)
         getgenv().win = Value
