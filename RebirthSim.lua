@@ -14,7 +14,7 @@ getgenv().clickMultiplier = false;
 getgenv().rebirthButton = false;
 getgenv().gemMultiplier = false;
 getgenv().luckMultiplier = false;
-grtgrnv().tapSkin = false;
+getgenv().tapSkin = false;
 
 
 
