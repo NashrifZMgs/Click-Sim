@@ -6,7 +6,7 @@ function AutoDumble(dumbles)
     spawn(function()
     while getgenv().dumble == true do
         local args = {
-            [1] = game:GetService("Players").LocalPlayer.Character:FindFirstChild(dumbles)a
+            [1] = game:GetService("Players").LocalPlayer.Character:FindFirstChild(dumbles)
         }
         game:GetService("ReplicatedStorage"):WaitForChild("Remote"):WaitForChild("Event"):WaitForChild("Game"):WaitForChild("[C-S]PlayerClick"):FireServer(unpack(args))
     end)
