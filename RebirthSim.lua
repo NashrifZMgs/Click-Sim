@@ -422,12 +422,8 @@ MainSection:AddDropdown({
                 typeRebirth = 125
             elseif Value == "2.5UVg" then
                 typeRebirth = 126
-            elseif Value == "10UVg" then
-                typeRebirth = 127
-            elseif Value == "25UVg" then
-                typeRebirth = 128
             elseif Value == "100UVg" then
-                typeRebirth = 129
+                typeRebirth = 127
             elseif Value == "250UVg" then
                 typeRebirth = 130
             end
