@@ -603,7 +603,7 @@ PetSection:AddDropdown({
 PetSection:AddDropdown({
     Name = "FireEgg",
     Default = {},
-    Options = {"Fire","Burning Forest","Volcano Realm","Hell Mine","Magma Temple","Fire Forge","Fire City"},
+    Options = {"Fire","Burning Forest","Volcanic Realm","Hell Mine","Magma Temple","Fire Forge","Fire City"},
     Callback = function(Value)
         if getgenv().egg == true then
             AutoEggs(typeEggs)
@@ -611,8 +611,8 @@ PetSection:AddDropdown({
                 typeEggs = "Fire"
             elseif Value == "Burning Forest" then
                 typeEggs = "Burning Forest"
-            elseif Value == "Volcano Realm" then
-                typeEggs = "Volcano Realm"
+            elseif Value == "Volcanic Realm" then
+                typeEggs = "Volcanic"
             elseif Value == "Hell Mine" then
                 typeEggs = "Hell Mine"
             elseif Value == "Magma Temple" then
