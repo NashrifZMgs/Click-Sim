@@ -1,5 +1,5 @@
 getgenv().win = true;
-getgen().dumble = true
+getgen().dumble = true;
 
 local dumbles = {"1_1","1_2","1_3","1_4","1_5","1_6","2_1","2_2"}
 
