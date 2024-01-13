@@ -1,5 +1,7 @@
 getgenv().win = true;
+getgen().dumble = true
 
+local dumbles = {"1_1","1_2","1_3","1_4","1_5","1_6","2_1","2_2"}
 
 function Autowin()
     spawn(function()
@@ -14,3 +16,15 @@ function Autowin()
     end)
 end
 Autowin()
+
+function AutoDumble(dumbles)
+    spawn(function()
+        while getgenv().dumble == true do
+            local args = {
+                [1] = game:GetService("Players").LocalPlayer.Character:FindFirstChild(dumbles)
+            }
+            game:GetService("ReplicatedStorage"):WaitForChild("Remote"):WaitForChild("Event"):WaitForChild("Game"):WaitForChild("[C-S]PlayerClick"):FireServer(unpack(args))
+        end
+    end)
+end
+AutoDumble(dumbles)
