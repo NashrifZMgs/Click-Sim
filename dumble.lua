@@ -15,7 +15,7 @@ function Autowin()
         end
     end)
 end
-Autowin()
+
 
 function AutoDumble(dumbles)
     spawn(function()
@@ -29,3 +29,4 @@ function AutoDumble(dumbles)
     end)
 end
 AutoDumble(dumbles)
+Autowin()
