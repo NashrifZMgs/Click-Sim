@@ -14,6 +14,7 @@ getgenv().clickMultiplier = false;
 getgenv().rebirthButton = false;
 getgenv().gemMultiplier = false;
 getgenv().luckMultiplier = false;
+grtgrnv().tapSkin = false;
 
 
 
@@ -109,6 +110,14 @@ function AutoUpLuck()
                 [1] = "LuckMultiplier"
             }
             game:GetService("ReplicatedStorage"):WaitForChild("Functions"):WaitForChild("Upgrade"):InvokeServer(unpack(args))
+            wait()
+        end
+    end)
+end
+function AutoBuySkin()
+    spawn(function()
+        while getgenv().tapSkin == true do
+            game:GetService("ReplicatedStorage"):WaitForChild("Functions"):WaitForChild("TapSkin"):InvokeServer()
             wait()
         end
     end)
@@ -705,7 +714,16 @@ UpgradeSection:AddToggle({
         end
     end
 })
-
+UpgradeSection:AddToggle({
+    Name = "AutoBuyTapSkins",
+    Default = false,
+    Callback = function(Value)
+        getgenv().tapSkin = Value
+        if getgenv().tapSkin == true then
+            AutoBuySkin()
+        end
+    end
+})
 --UpgradesTabEnd--
 
 --Player Tab--
