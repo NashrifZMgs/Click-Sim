@@ -1,5 +1,5 @@
-getgenv().win = true;
-getgenv().dumble = true;
+getgenv().win = false;
+getgenv().dumble = false;
 
 local dumbles = {"1_1","1_2","1_3","1_4","1_5","1_6","2_1","2_2"}
 
@@ -28,5 +28,5 @@ function AutoDumble(dumbles)
         end
     end)
 end
-AutoDumble(dumbles[8])
+AutoDumble(dumbles)
 Autowin()
