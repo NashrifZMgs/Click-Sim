@@ -159,7 +159,7 @@ MainSection:AddToggle({
 MainSection:AddDropdown({
 	Name = "Rebirth",
 	Default = {},
-	Options = {"1","5","10","25","100","500","2.5k","5k","10k","50k","250k","1M","25M","100M","500M","1B","2.5B","10B","50B","250B","1T","10T","25T","100T","250T","1Qd","2.5Qd","10Qd","50Qd","250Qd","1Qn","5Qn","50Qn","100Qn","500Qn","1Sx","5Sx","10Sx","25Sx","100Sx","500Sx","1Sp","2.5Sp","10Sp","25Sp","100Sp","250Sp","1O","2.5O","10O","25O","100O","250O","1N","2.5N","10N","25N","100N","250N","1de","2.5de","10de","25de","100de","250de","1Ud","2.5Ud","10Ud","25Ud","100Ud","250Ud","1DD","2.5DD","10DD","25DD","100DD","250DD","1tdD","2.5tdD","10tdD","25tdD","100tdD","250tdD","1qdD","2.5qdD","10qdD","25qdD","100qdD","250qdD","1QnD","2.5QnD","10QnD","25QnD","100Qnd","250QnD","1sxD","2.5sxD","10sxD","25sxD","100sxD","250sxD","1SpD","2.5SpD","10SpD","25SpD","100SpD","250SpD","1OcD","2.5OcD","10OcD","25OcD","100OcD","250OcD","1NvD","2.5NvD","10NvD","25NvD","100NvD","250NvD","1Vgn","2.5Vgn","10Vgn","25Vgn","100Vgn","250Vgn"},
+	Options = {"1","5","10","25","100","500","2.5k","5k","10k","50k","250k","1M","25M","100M","500M","1B","2.5B","10B","50B","250B","1T","10T","25T","100T","250T","1Qd","2.5Qd","10Qd","50Qd","250Qd","1Qn","5Qn","50Qn","100Qn","500Qn","1Sx","5Sx","10Sx","25Sx","100Sx","500Sx","1Sp","2.5Sp","10Sp","25Sp","100Sp","250Sp","1O","2.5O","10O","25O","100O","250O","1N","2.5N","10N","25N","100N","250N","1de","2.5de","10de","25de","100de","250de","1Ud","2.5Ud","10Ud","25Ud","100Ud","250Ud","1DD","2.5DD","10DD","25DD","100DD","250DD","1tdD","2.5tdD","10tdD","25tdD","100tdD","250tdD","1qdD","2.5qdD","10qdD","25qdD","100qdD","250qdD","1QnD","2.5QnD","10QnD","25QnD","100Qnd","250QnD","1sxD","2.5sxD","10sxD","25sxD","100sxD","250sxD","1SpD","2.5SpD","10SpD","25SpD","100SpD","250SpD","1OcD","2.5OcD","10OcD","25OcD","100OcD","250OcD","1NvD","2.5NvD","10NvD","25NvD","100NvD","250NvD","1Vgn","2.5Vgn","10Vgn","25Vgn","100Vgn","250Vgn","1UVg","2.5UVg","10UVg","25UVg","100UVg","250UVg"},
 	Callback = function(Value)
 		if getgenv().rebirth == true then
             AutoRebirth()
@@ -409,6 +409,18 @@ MainSection:AddDropdown({
                 typeRebirth = 123
             elseif Value == "250Vgn" then
                 typeRebirth = 124
+            elseif Value == "1UVg" then
+                typeRebirth = 125
+            elseif Value == "2.5UVg" then
+                typeRebirth = 126
+            elseif Value == "10UVg" then
+                typeRebirth = 127
+            elseif Value == "25UVg" then
+                typeRebirth = 128
+            elseif Value == "100UVg" then
+                typeRebirth = 129
+            elseif Value == "250UVg" then
+                typeRebirth = 130
             end
         end
 	end    
