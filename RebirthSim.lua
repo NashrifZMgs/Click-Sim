@@ -194,221 +194,215 @@ MainSection:AddDropdown({
                 typeRebirth = 17
             elseif Value == "10B" then
                 typeRebirth = 18
-            elseif Value == "50B" then
-                typeRebirth = 19
             elseif Value == "250B" then
-                typeRebirth = 20
+                typeRebirth = 19
             elseif Value == "1T" then
-                typeRebirth = 21
+                typeRebirth = 20
             elseif Value == "10T" then
-                typeRebirth = 22
-            elseif Value == "" then
-                typeRebirth = 23
+                typeRebirth = 21
             elseif Value == "25T" then
-                typeRebirth = 24
+                typeRebirth = 22
             elseif Value == "100T" then
-                typeRebirth = 25
+                typeRebirth = 23
             elseif Value == "250T" then
-                typeRebirth = 26
+                typeRebirth = 24
             elseif Value == "1Qd" then
-                typeRebirth = 27
-            elseif Value == "5Qd" then
-                typeRebirth = 28
+                typeRebirth = 25
+            elseif Value == "10Qd" then
+                typeRebirth = 26
             elseif Value == "50Qd" then
-                typeRebirth = 29
-            elseif Value == "100Qd" then
-                typeRebirth = 30
+                typeRebirth = 27
             elseif Value == "250Qd" then
-                typeRebirth = 31
+                typeRebirth = 28
             elseif Value == "1Qn" then
-                typeRebirth = 32
+                typeRebirth = 29
             elseif Value == "5Qn" then
-                typeRebirth = 33
+                typeRebirth = 30
             elseif Value == "50Qn" then
-                typeRebirth = 34
+                typeRebirth = 31
             elseif Value == "100Qn" then
-                typeRebirth = 35
+                typeRebirth = 32
             elseif Value == "500Qn" then
-                typeRebirth = 36
+                typeRebirth = 33
             elseif Value == "1Sx" then
-                typeRebirth = 37
+                typeRebirth = 34
             elseif Value == "5Sx" then
-                typeRebirth = 38
+                typeRebirth = 35
             elseif Value == "10Sx" then
-                typeRebirth = 39
+                typeRebirth = 36
             elseif Value == "25Sx" then
-                typeRebirth = 40
+                typeRebirth = 37
             elseif Value == "100Sx" then
-                typeRebirth = 41
+                typeRebirth = 38
             elseif Value == "500Sx" then
-                typeRebirth = 42
+                typeRebirth = 39
             elseif Value == "1Sp" then
-                typeRebirth = 43
+                typeRebirth = 40
             elseif Value == "2.5Sp" then
-                typeRebirth = 44
+                typeRebirth = 41
             elseif Value == "10Sp" then
-                typeRebirth = 45
+                typeRebirth = 42
             elseif Value == "25Sp" then
-                typeRebirth = 46
+                typeRebirth = 43
             elseif Value == "100Sp" then
-                typeRebirth = 47
+                typeRebirth = 44
             elseif Value == "250Sp" then
-                typeRebirth = 48
+                typeRebirth = 45
             elseif Value == "1O" then
-                typeRebirth = 49
+                typeRebirth = 46
             elseif Value == "2.5O" then
-                typeRebirth = 50
+                typeRebirth = 47
             elseif Value == "10O" then
-                typeRebirth = 51
+                typeRebirth = 48
             elseif Value == "25O" then
-                typeRebirth = 52
+                typeRebirth = 49
             elseif Value == "100O" then
-                typeRebirth = 53
+                typeRebirth = 50
             elseif Value == "250O" then
-                typeRebirth = 54
+                typeRebirth = 51
             elseif Value == "1N" then
-                typeRebirth = 55
+                typeRebirth = 52
             elseif Value == "2.5N" then
-                typeRebirth = 56
+                typeRebirth = 53
             elseif Value == "10N" then
-                typeRebirth = 57
+                typeRebirth = 54
             elseif Value == "25N" then
-                typeRebirth = 58
+                typeRebirth = 55
             elseif Value == "100N" then
-                typeRebirth = 59
+                typeRebirth = 56
             elseif Value == "250N" then
-                typeRebirth = 60
+                typeRebirth = 57
             elseif Value == "1de" then
-                typeRebirth = 61
+                typeRebirth = 58
             elseif Value == "2.5de" then
-                typeRebirth = 62
+                typeRebirth = 59
             elseif Value == "10de" then
-                typeRebirth = 63
+                typeRebirth = 60
             elseif Value == "25de" then
-                typeRebirth = 64
+                typeRebirth = 61
             elseif Value == "100de" then
-                typeRebirth = 65
+                typeRebirth = 62
             elseif Value == "250de" then
-                typeRebirth = 66
+                typeRebirth = 63
             elseif Value == "1Ud" then
-                typeRebirth = 67
+                typeRebirth = 64
             elseif Value == "2.5Ud" then
-                typeRebirth = 68
+                typeRebirth = 65
             elseif Value == "10Ud" then
-                typeRebirth = 69
+                typeRebirth = 66
             elseif Value == "25Ud" then
-                typeRebirth = 70
+                typeRebirth = 67
             elseif Value == "100Ud" then
-                typeRebirth = 71
+                typeRebirth = 68
             elseif Value == "250Ud" then
-                typeRebirth = 72
+                typeRebirth = 69
             elseif Value == "1DD" then
-                typeRebirth = 73
+                typeRebirth = 70
             elseif Value == "2.5DD" then
-                typeRebirth = 74
+                typeRebirth = 71
             elseif Value == "10DD" then
-                typeRebirth = 75
+                typeRebirth = 72
             elseif Value == "25DD" then
-                typeRebirth = 76
+                typeRebirth = 73
             elseif Value == "100DD" then
-                typeRebirth = 77
+                typeRebirth = 74
             elseif Value == "250DD" then
-                typeRebirth = 78
+                typeRebirth = 75
             elseif Value == "1tdD" then
-                typeRebirth = 79
+                typeRebirth = 76
             elseif Value == "2.5tdD" then
-                typeRebirth = 80
+                typeRebirth = 77
             elseif Value == "10tdD" then
-                typeRebirth = 81
+                typeRebirth = 78
             elseif Value == "25tdD" then
-                typeRebirth = 82
+                typeRebirth = 79
             elseif Value == "100tdD" then
-                typeRebirth = 83
+                typeRebirth = 80
             elseif Value == "250tdD" then
-                typeRebirth = 84
+                typeRebirth = 81
             elseif Value == "1qdD" then
-                typeRebirth = 85
+                typeRebirth = 82
             elseif Value == "2.5qdD" then
-                typeRebirth = 86
+                typeRebirth = 83
             elseif Value == "10qdD" then
-                typeRebirth = 87
+                typeRebirth = 84
             elseif Value == "25qdD" then
-                typeRebirth = 89
+                typeRebirth = 85
             elseif Value == "100qdD" then
-                typeRebirth = 90
+                typeRebirth = 86
             elseif Value == "250qdD" then
-                typeRebirth = 91
+                typeRebirth = 87
             elseif Value == "1QnD" then
-                typeRebirth = 92
+                typeRebirth = 88
             elseif Value == "2.5QnD" then
-                typeRebirth = 93
+                typeRebirth = 89
             elseif Value == "10QnD" then
-                typeRebirth = 94
+                typeRebirth = 90
             elseif Value == "25QnD" then
-                typeRebirth = 95
+                typeRebirth = 91
             elseif Value == "100QnD" then
-                typeRebirth = 96
+                typeRebirth = 92
             elseif Value == "250QnD" then
             elseif Value == "1sxD" then
-                typeRebirth = 97
+                typeRebirth = 93
             elseif Value == "2.5sxD" then
-                typeRebirth = 98
+                typeRebirth = 94
             elseif Value == "10sxD" then
-                typeRebirth = 99
+                typeRebirth = 95
             elseif Value == "25sxD" then
-                typeRebirth = 100
+                typeRebirth = 96
             elseif Value == "100sxD" then
-                typeRebirth = 101
+                typeRebirth = 97
             elseif Value == "250sxD" then
-                typeRebirth = 102
+                typeRebirth = 98
             elseif Value == "1SpD" then
-                typeRebirth = 103
+                typeRebirth = 99
             elseif Value == "2.5Spd" then
-                typeRebirth = 104
+                typeRebirth = 100
             elseif Value == "10Spd" then
-                typeRebirth = 105
+                typeRebirth = 101
             elseif Value == "25Spd" then
-                typeRebirth = 106
+                typeRebirth = 102
             elseif Value == "100Spd" then
-                typeRebirth = 107
+                typeRebirth = 103
             elseif Value == "250Spd" then
-                typeRebirth = 108
+                typeRebirth = 104
             elseif Value == "1OcD" then
-                typeRebirth = 109
+                typeRebirth = 105
             elseif Value == "2.5OcD" then
-                typeRebirth = 110
+                typeRebirth = 106
             elseif Value == "10OcD" then
-                typeRebirth = 111
+                typeRebirth = 107
             elseif Value == "25OcD" then
-                typeRebirth = 112
+                typeRebirth = 108
             elseif Value == "100OcD" then
-                typeRebirth = 113
+                typeRebirth = 109
             elseif Value == "250OcD" then
-                typeRebirth = 114
+                typeRebirth = 110
             elseif Value == "1NvD" then
-                typeRebirth = 115
+                typeRebirth = 111
             elseif Value == "2.5NvD" then
-                typeRebirth = 116
+                typeRebirth = 112
             elseif Value == "10NvD" then
-                typeRebirth = 117
+                typeRebirth = 113
             elseif Value == "25NvD" then
-                typeRebirth = 118
+                typeRebirth = 114
             elseif Value == "100NvD" then
-                typeRebirth = 119
+                typeRebirth = 115
             elseif Value == "250NvD" then
-                typeRebirth = 120
+                typeRebirth = 116
             elseif Value == "1Vgn" then
-                typeRebirth = 121
+                typeRebirth = 117
             elseif Value == "2.5Vgn" then
-                typeRebirth = 122
+                typeRebirth = 118
             elseif Value == "10Vgn" then
-                typeRebirth = 123
+                typeRebirth = 119
             elseif Value == "25Vgn" then
-                typeRebirth = 124
+                typeRebirth = 121
             elseif Value == "100Vgn" then
-                typeRebirth = 125
+                typeRebirth = 122
             elseif Value == "250Vgn" then
-                typeRebirth = 126
+                typeRebirth = 123
             end
         end
 	end    
