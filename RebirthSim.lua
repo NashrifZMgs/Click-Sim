@@ -113,7 +113,7 @@ end
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
 OrionLib:MakeNotification({
-	Name = "Orion Example",
+	Name = "KiokenZHub",
 	Content = "Orion Example",
 	Image = "rbxassetid://4483345998",
 	Time = 5
@@ -121,7 +121,7 @@ OrionLib:MakeNotification({
 
 
 
-local Window = OrionLib:MakeWindow({Name = "Orion Example", HidePremium = false, SaveConfig = true, ConfigFolder = "Orion"})
+local Window = OrionLib:MakeWindow({Name = "Rebirth Champions X", HidePremium = false, SaveConfig = true, ConfigFolder = "Orion"})
 
 
 --MainTab--
@@ -470,6 +470,157 @@ PetSection:AddDropdown({
                 typeEggs = "Steampunk"
             elseif Value == "Hell" then
                 typeEggs = "Hell"
+            end
+        end
+    end
+})
+PetSection:AddDropdown({
+    Name = "SpaceEgg",
+    Default = {},
+    Options = {"Space","Mars","Alien","Galaxy Forest","Space Lab","Space Fantasy","Neon","Shadow","Destruction","Sun","Saturn","Hacker","Black Hole"},
+    Callback = function(Value)
+        if getgenv().egg == true then
+            AutoEggs(typeEggs)
+            if Value == "Space" then
+                typeEggs = "Space"
+            elseif Value == "Mars" then
+                typeEggs = "Mars"
+            elseif Value == "Alien" then
+                typeEggs = "Alien"
+            elseif Value == "Galaxy Forest" then
+                typeEggs = "Galaxy Forest"
+            elseif Value == "Space Lab" then
+                typeEggs = "SpaceLab"
+            elseif Value == "Space Fantasy" then
+                typeEggs = "Fantasy"
+            elseif Value == "Neon" then
+                typeEggs = "Neon"
+            elseif Value == "Shadow" then
+                typeEggs = "Shadow"
+            elseif Value == "Destruction" then
+                typeEggs = "Destruction"
+            elseif Value == "Sun" then
+                typeEggs = "Sun"
+            elseif Value == "Saturn" then
+                typeEggs = "Saturn"
+            elseif Value == "Hacker" then
+                typeEggs = "Hacker"
+            elseif Value == "Black Hole" then
+                typeEggs = "Black Hole"
+            end
+        end
+    end
+})
+PetSection:AddDropdown({
+    Name = "AquaEgg",
+    Default = {},
+    Options = {"Aqua","Axolotls","Underwater Lab","Pixel","Sea Cave","Ancient","Pirate","Exotic Island","Fishing Village","Ocean","Underwater Volcano",},
+    Callback = function(Value)
+        if getgenv().egg == true then
+            AutoEggs(typeEggs)
+            if Value == "Aqua" then
+                typeEggs = "Aqua"
+            elseif Value == "Axolotls" then
+                typeEggs = "Axolotls"
+            elseif Value == "Underwater Lab" then
+                typeEggs = "Underwater Lab"
+            elseif Value == "Pixel" then
+                typeEggs = "Pixel"
+            elseif Value == "Sea Cave" then
+                typeEggs = "Sea Cave"
+            elseif Value == "Ancient" then
+                typeEggs = "Ancient"
+            elseif Value == "Pirate" then
+                typeEggs = "Pirate"
+            elseif Value == "Exotic Island" then
+                typeEggs = "Exotic Island"
+            elseif Value == "Fishing Village" then
+                typeEggs = "Fishing Village"
+            elseif Value == "Ocean" then
+                typeEggs = "Ocean"
+            elseif Value == "Underwater Volcano" then
+                typeEggs = "Underwater Volcano"
+            end
+        end
+    end
+})
+PetSection:AddDropdown({
+    Name = "FantasyEgg",
+    Default = {},
+    Options = {"Fantasy Spawn","Fantasy Jungle","Dragon World","Fairy Island","Fantasy Glacier","Mystic Swamp","Haunted Castle","Rainbow World","Bee World"},
+    Callback = function(Value)
+        if getgenv().egg == true then
+            AutoEggs(typeEggs)
+            if Value == "Fantasy Spawn" then
+                typeEggs = "Fantasy Spawn"
+            elseif Value == "Fantasy Jungle" then
+                typeEggs = "Fantasy Jungle"
+            elseif Value == "Dragon World" then
+                typeEggs = "Dragon World"
+            elseif Value == "Fairy Island" then
+                typeEggs = "Fairy Island"
+            elseif Value == "Fantasy Glacier" then
+                typeEggs = "Fantasy Glacier"
+            elseif Value == "Mystic Swamp" then
+                typeEggs = "Mystic Swamp"
+            elseif Value == "Haunted Castle" then
+                typeEggs = "Haunted Castle"
+            elseif Value == "Rainbow World" then
+                typeEggs = "Rainbow World"
+            elseif Value == "Bee World" then
+                typeEggs = "Bee World"
+            end
+        end
+    end
+})
+PetSection:AddDropdown({
+    Name = "TimeSpawnEgg",
+    Default = {},
+    Options = {"Time Spawn","Prehistory","Ancient Egypt","Mediaval Castle","Wild West","Viking","Military","Futuristic City"},
+    Callback = function(Value)
+        if getgenv().egg == true then
+            AutoEggs(typeEggs)
+            if Value == "Time Spawn" then
+                typeEggs = "Time Spawn"
+            elseif Value == "Prehistory" then
+                typeEggs = "Prehistory"
+            elseif Value == "Ancient Egypt" then
+                typeEggs = "Ancient Egypt"
+            elseif Value == "Mediaval Castle" then
+                typeEggs = "Mediaval Castle"
+            elseif Value == "Wild West" then
+                typeEggs = "Wild West"
+            elseif Value == "Viking" then
+                typeEggs = "Viking"
+            elseif Value == "Military" then
+                typeEggs = "Military"
+            elseif Value == "Futuristic City" then
+                typeEggs = "Futuristic"
+            end
+        end
+    end
+})
+PetSection:AddDropdown({
+    Name = "FireEgg",
+    Default = {},
+    Options = {"Fire","Burning Forest","Volcano Realm","Hell Mine","Magma Temple","Fire Forge","Fire City"},
+    Callback = function(Value)
+        if getgenv().egg == true then
+            AutoEggs(typeEggs)
+            if Value == "Fire" then
+                typeEggs = "Fire"
+            elseif Value == "Burning Forest" then
+                typeEggs = "Burning Forest"
+            elseif Value == "Volcano Realm" then
+                typeEggs = "Volcano Realm"
+            elseif Value == "Hell Mine" then
+                typeEggs = "Hell Mine"
+            elseif Value == "Magma Temple" then
+                typeEggs = "Magma Temple"
+            elseif Value == "Fire Forge" then
+                typeEggs = "Fire Forge"
+            elseif Value == "Fire City" then
+                typeEggs = "Fire City"
             end
         end
     end
