@@ -449,6 +449,7 @@ PetSection:AddToggle({
         getgenv().egg = Value
     end
 })
+PetSection:AddParagraph("Note:","Turn Off the toggle first when you switching egg then Turn it on before choosing egg")
 PetSection:AddDropdown({
     Name = "SpawnEgg",
     Default = {},
