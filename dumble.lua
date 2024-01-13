@@ -9,6 +9,7 @@ function Autowin()
             [2] = 1
         }
         game:GetService("ReplicatedStorage"):WaitForChild("Remote"):WaitForChild("Event"):WaitForChild("Game"):WaitForChild("[C-S]PlayerEnd"):FireServer(unpack(args))
+        wait()
     end)
 end
 AutoWin()
