@@ -22,6 +22,11 @@ function AutoClick()
         while getgenv().click == true do
             game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Click3"):FireServer()
             wait()
+            local args = {
+                [1] = true
+            }
+            game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("AutoClickerState"):FireServer(unpack(args))
+            wait()
         end
     end)
 end
