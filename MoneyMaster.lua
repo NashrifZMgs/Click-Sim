@@ -6,6 +6,9 @@ local rebirthButton
 getgenv().eggs = false;
 local typeEggs
 
+--upgrade--
+getgenv().UpRebirth = false;
+
 --Main Function--
 function autoTap()
     spawn(function()
@@ -44,6 +47,20 @@ function autoHatch(typeEggs)
         end
     end)
 end
+
+function autoBuyRebirth()
+    spawn(function()
+        while getgenv().UpRebirth == true do
+            local args = {
+                [1] = "More Rebirth Buttons",
+                [2] = "One"
+            }
+            game:GetService("ReplicatedStorage").Functions.Upgrade:InvokeServer(unpack(args))
+            wait()
+        end
+    end)
+end
+
 
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
@@ -213,6 +230,27 @@ PetSection:AddDropdown({
 })
 
 --Pet Tab End--
+--UPGRADE TAB--
+local UpgradeTab = Window:MakeTab({
+	Name = "Upgrade",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local UpgradeSection = UpgradeTab:AddSection({
+	Name = "AutoUp"
+})
+
+UpgradeSection:AddToggle({
+	Name = "RebirthButton",
+	Default = false,
+	Callback = function(Value)
+		getgenv().UpRebirth = Value
+        if getgenv().UpRebirth == true then
+            autoBuyRebirth()
+        end
+	end    
+})
 
 
 --Player Tab--
