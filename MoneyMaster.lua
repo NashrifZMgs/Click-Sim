@@ -136,7 +136,7 @@ PetSection:AddToggle({
 PetSection:AddDropdown({
 	Name = "EggTypes",
 	Default = "None",
-	Options = {"None","Common","Rare"},
+	Options = {"None","Common","Rare","Prestige","Candy","Ocean","Jungle","Electro","Heaven","Virus Titan","Midnight","500k","Toys","Bauble","Santa","Exclusive","Cube","Gigachad"},
 	Callback = function(Value)
         if Value == "None" then
             typeEggs = "None"
@@ -144,6 +144,36 @@ PetSection:AddDropdown({
             typeEggs = "Common Egg"
         elseif Value == "Rare" then
             typeEggs = "Rare Egg"
+        elseif Value == "Prestige" then
+            typeEggs = "Prestige Egg"
+        elseif Value == "Candy" then
+            typeEggs = "Candy Egg"
+        elseif Value == "Ocean" then
+            typeEggs = "Ocean Egg"
+        elseif Value == "Jungle" then
+            typeEggs = "Jungle Egg"
+        elseif Value == "Electro" then
+            typeEggs = "Electro Egg"
+        elseif Value == "Heaven" then
+            typeEggs = "Heaven Egg"
+        elseif Value == "Virus Titan" then
+            typeEggs = "Virus Titan Stock"
+        elseif Value == "Midnight" then
+            typeEggs = "Midnight Egg"
+        elseif Value == "500k" then
+            typeEggs = "500k Egg"
+        elseif Value == "Toys" then
+            typeEggs = "Toys Egg"
+        elseif Value == "Bauble" then
+            typeEggs = "Bauble Egg"
+        elseif Value == "Santa" then
+            typeEggs = "Santa Stock"
+        elseif Value == "Exclusive" then
+            typeEggs = "Exclusive Egg"
+        elseif Value == "Cube" then
+            typeEggs = "Cube Egg"
+        elseif Value == "Gigachad" then
+            typeEggs = "Gigachad Egg"
         end
     end
 })
