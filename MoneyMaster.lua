@@ -49,14 +49,14 @@ end
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
 OrionLib:MakeNotification({
-	Name = "Orion Example",
-	Content = "Orion Example",
+	Name = "KiokenZHub",
+	Content = "Welcome to KiokenZHub",
 	Image = "rbxassetid://4483345998",
 	Time = 5
 })
 
 
-local Window = OrionLib:MakeWindow({Name = "Orion Example", HidePremium = false, SaveConfig = true, ConfigFolder = "Orion"})
+local Window = OrionLib:MakeWindow({Name = "Money Master", HidePremium = false, SaveConfig = true, ConfigFolder = "Orion"})
 
 
 --Main Tab--
