@@ -140,7 +140,6 @@ PetSection:AddDropdown({
 	Callback = function(Value)
         if Value == "None" then
             typeEggs = "None"
-            break
         elseif Value == "Common" then
             typeEggs = "Common Egg"
         elseif Value == "Rare" then
