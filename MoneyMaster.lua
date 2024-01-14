@@ -2,6 +2,11 @@ getgenv().tap = false;
 getgenv().rebirth = false;
 local rebirthButton
 
+--Pets--
+getgenv().eggs = false;
+local typeEggs
+
+--Main Function--
 function autoTap()
     spawn(function()
         while getgenv().tap == true do
@@ -26,6 +31,19 @@ function autoRebirth(rebirthButton)
     end)
 end
 
+--Pet Function--
+function autoHatch(typeEggs)
+    spawn(function()
+        while getgenv().eggs == true do
+            local args = {
+                [1] = typeEggs,
+                [2] = "Three"
+            }
+            game:GetService("ReplicatedStorage").Events.HatchEgg:FireServer(unpack(args))
+            wait()
+        end
+    end)
+end
 
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
@@ -92,6 +110,47 @@ MainSection:AddDropdown({
 })
 
 --Main Tab End--
+
+--Pet Tab--
+
+local PetTab = Window:MakeTab({
+	Name = "Pets",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local PetSection = PetTab:AddSection({
+	Name = "Eggs"
+})
+PetSection:AddToggle({
+	Name = "AutoEggs",
+	Default = false,
+	Callback = function(Value)
+		getgenv().eggs = Value
+        if getgenv().eggs == true then
+            autoHatch()
+        end
+	end    
+})
+
+MainSection:AddDropdown({
+	Name = "EggTypes",
+	Default = "None",
+	Options = {"None","Common", "Rare"},
+	Callback = function(Value)
+        if Value == "None" then
+            typeEggs = "None"
+            break
+        elseif Value == "Common" then
+            typeEggs = "Common Egg"
+        elseif Value == "Rare" then
+            typeEggs = "Rare Egg"
+        end
+    end
+})
+
+--Pet Tab End--
+
 
 --Player Tab--
 
