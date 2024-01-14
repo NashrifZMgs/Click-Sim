@@ -1,5 +1,5 @@
 getgenv().tap = false;
-
+getgenv().rebirth = false;
 
 function autoTap()
     spawn(function()
@@ -13,7 +13,17 @@ function autoTap()
     end)
 end
 
-
+function autoRebirth()
+    spawn(function()
+        while getgenv().rebirth == true do
+            local args = {
+                [1] = 0
+            }
+            game:GetService("ReplicatedStorage").Events.Rebirth:FireServer(unpack(args))
+            wait()
+        end
+    end)
+end
 
 
 
@@ -50,6 +60,17 @@ MainSection:AddToggle({
 		getgenv().tap = Value
         if getgenv().tap == true then
             autoTap()
+        end
+	end    
+})
+
+MainSection:AddToggle({
+	Name = "AutoRebirth",
+	Default = false,
+	Callback = function(Value)
+		getgenv().rebirth = Value
+        if getgenv().rebirth == true then
+            autoRebirth()
         end
 	end    
 })
