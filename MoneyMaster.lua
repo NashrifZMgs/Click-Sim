@@ -97,7 +97,7 @@ MainSection:AddToggle({
 MainSection:AddDropdown({
 	Name = "RebirthType",
 	Default = "None",
-	Options = {"None","1", "2","5","25"},
+	Options = {"None","1", "2","5","25","150","1500","15000"},
 	Callback = function(Value)
 		if Value == "1" then
             rebirthButton = 0
@@ -107,6 +107,12 @@ MainSection:AddDropdown({
             rebirthButton = 2
         elseif Value == "25" then
             rebirthButton = 3
+        elseif Value == "150" then
+            rebirthButton = 4
+        elseif Value == "1500" then
+            rebirthButton = 5
+        elseif Value == "15000" then
+            rebirthButton = 6
         end
 	end    
 })
