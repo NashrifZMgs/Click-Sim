@@ -128,7 +128,7 @@ PetSection:AddToggle({
 	Callback = function(Value)
 		getgenv().eggs = Value
         if getgenv().eggs == true then
-            autoHatch()
+            autoHatch(typeEggs)
         end
 	end    
 })
