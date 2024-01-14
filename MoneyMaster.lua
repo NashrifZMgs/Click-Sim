@@ -5,7 +5,7 @@ function autoTap()
     spawn(function()
         while getgenv().tap == true do
             local args = {
-                [1] = "click"
+                [1] = "Click"
             }
             game:GetService("ReplicatedStorage").Events.Tap:FireServer(unpack(args))
             wait()
