@@ -133,7 +133,7 @@ PetSection:AddToggle({
 	end    
 })
 
-MainSection:AddDropdown({
+PetSection:AddDropdown({
 	Name = "EggTypes",
 	Default = "None",
 	Options = {"None","Common","Rare"},
