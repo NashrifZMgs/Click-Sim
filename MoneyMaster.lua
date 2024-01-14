@@ -1,5 +1,6 @@
 getgenv().tap = false;
 getgenv().rebirth = false;
+local rebirthButton
 
 function autoTap()
     spawn(function()
@@ -13,11 +14,11 @@ function autoTap()
     end)
 end
 
-function autoRebirth()
+function autoRebirth(rebirthButton)
     spawn(function()
         while getgenv().rebirth == true do
             local args = {
-                [1] = 0
+                [1] = rebirthButton
             }
             game:GetService("ReplicatedStorage").Events.Rebirth:FireServer(unpack(args))
             wait()
@@ -70,7 +71,20 @@ MainSection:AddToggle({
 	Callback = function(Value)
 		getgenv().rebirth = Value
         if getgenv().rebirth == true then
-            autoRebirth()
+            autoRebirth(rebirthButton)
+        end
+	end    
+})
+
+MainSection:AddDropdown({
+	Name = "RebirthType",
+	Default = "None",
+	Options = {"1", "2"},
+	Callback = function(Value)
+		if Value == "1" then
+            rebirthButton = 0
+        elseif Value == "2" then
+            rebirthButton = 1
         end
 	end    
 })
