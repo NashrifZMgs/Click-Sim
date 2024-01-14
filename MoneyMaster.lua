@@ -5,6 +5,8 @@ local rebirthButton
 --Pets--
 getgenv().eggs = false;
 local typeEggs
+getgenv().craft = false;
+getgenv().EquipBest = false;
 
 --upgrade--
 getgenv().UpRebirth = false;
@@ -47,7 +49,33 @@ function autoHatch(typeEggs)
         end
     end)
 end
+--Pet Function--
+function autoEquipBest()
+    spawn(function()
+        while getgenv().EquipBest == true do
+            local args = {
+                [1] = "EquipBest",
+                [2] = "Taps"
+            }
+            game:GetService("ReplicatedStorage").Events.Pets:FireServer(unpack(args))
+            wait()
+        end
+    end)
+end
+function autoCraft()
+    spawn(function()
+        while getgenv().UpRebirth == true do
+            local args = {
+                [1] = "CraftAll"
+            }
+            game:GetService("ReplicatedStorage").Functions.Pets:InvokeServer(unpack(args))
+            wait()
+        end
+    end)
+end
 
+
+--upgrade--
 function autoBuyRebirth()
     spawn(function()
         while getgenv().UpRebirth == true do
@@ -227,6 +255,29 @@ PetSection:AddDropdown({
             typeEggs = "Gigachad Egg"
         end
     end
+})
+local OtherSection = PetTab:AddSection({
+    Name = "Other"
+})
+OtherSection:AddToggle({
+	Name = "EquipBest",
+	Default = false,
+	Callback = function(Value)
+		getgenv().EquipBest = Value
+        if getgenv().EquipBest == true then
+            autoEquipBest()
+        end
+	end    
+})
+OtherSection:AddToggle({
+	Name = "AutoCraft",
+	Default = false,
+	Callback = function(Value)
+		getgenv().craft = Value
+        if getgenv().craft == true then
+            autoCraft()
+        end
+	end    
 })
 
 --Pet Tab End--
