@@ -136,7 +136,7 @@ PetSection:AddToggle({
 MainSection:AddDropdown({
 	Name = "EggTypes",
 	Default = "None",
-	Options = {"None","Common", "Rare"},
+	Options = {"None","Common","Rare"},
 	Callback = function(Value)
         if Value == "None" then
             typeEggs = "None"
