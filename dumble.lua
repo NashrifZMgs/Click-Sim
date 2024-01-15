@@ -108,7 +108,7 @@ PlayerSection:AddSlider({
 	Name = "Walkspeed",
 	Min = 16,
 	Max = 100,
-	Default = 5,
+	Default = 20,
 	Color = Color3.fromRGB(255,255,255),
 	Increment = 1,
 	ValueName = "Walkspeed",

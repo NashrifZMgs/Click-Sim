@@ -58,7 +58,7 @@ function autoEquipBest()
                 [2] = "Taps"
             }
             game:GetService("ReplicatedStorage").Events.Pets:FireServer(unpack(args))
-            wait()
+            wait(5)
         end
     end)
 end
@@ -69,7 +69,7 @@ function autoCraft()
                 [1] = "CraftAll"
             }
             game:GetService("ReplicatedStorage").Functions.Pets:InvokeServer(unpack(args))
-            wait()
+            wait(5)
         end
     end)
 end
