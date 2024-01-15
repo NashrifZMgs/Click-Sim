@@ -5,6 +5,7 @@ function AutoClick()
     spawn(function()
         while getgenv().click == true then
             game:GetService("Players").LocalPlayer.PlayerGui.RemoteEvents.Click:FireServer()
+			wait()
         end
     end)
 end
@@ -33,9 +34,8 @@ local MainTab = Window:MakeTab({
 })
 
 local MainSection = MainTab:AddSection({
-	Name = "AutoClick"
+	Name = "Main"
 })
-
 
 MainSection:AddToggle({
 	Name = "AutoClick",
