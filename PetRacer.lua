@@ -1,9 +1,9 @@
-getgenv().click = false;
+getgenv().clicker = false;
 
 
 function AutoClick()
     spawn(function()
-        while getgenv().click == true then
+        while getgenv().clicker == true then
             game:GetService("Players").LocalPlayer.PlayerGui.RemoteEvents.Click:FireServer()
 			wait()
         end
@@ -41,8 +41,8 @@ MainSection:AddToggle({
 	Name = "AutoClick",
 	Default = false,
 	Callback = function(Value)
-		getgenv().click = Value
-        if getgenv().click == true then
+		getgenv().clicker = Value
+        if getgenv().clicker == true then
             AutoClick()
         end
 	end    
