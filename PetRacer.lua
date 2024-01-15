@@ -25,7 +25,7 @@ OrionLib:MakeNotification({
 
 local Window = OrionLib:MakeWindow({Name = "Orion Example", HidePremium = false, SaveConfig = true, ConfigFolder = "Orion"})
 
---Main Tab --
+--Main Tab--
 
 local MainTab = Window:MakeTab({
 	Name = "Main",
