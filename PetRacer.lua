@@ -106,15 +106,6 @@ SettingsSection:AddToggle({
 	end    
 })
 
-SettingsSection:AddDropdown({
-	Name = "Dropdown",
-	Default = "1",
-	Options = {"1", "2"},
-	Callback = function(Value)
-		print(Value)
-	end    
-})
-
 --Settings End--
 
 OrionLib:Init() --UI Lib End
